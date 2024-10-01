@@ -14,8 +14,32 @@ namespace RouteLink.Generators.Tests
                     public static string FacilityEdit(int clientId, int facilityId)
                     {
                         string?[] segments = ["client", clientId.ToString(), "facilities", facilityId.ToString()];
-                        var length = RouteLink.Generators.Tests.Routes.ComputeLength(segments);
-                        return string.Create(length, segments, RouteLink.Generators.Tests.Routes.CreateLink);
+
+                        var length = 0;
+                        for (int i = 0; i < segments.Length; i++)
+                        {
+                            var segment = segments[i];
+                            length += segment != null ? segment.Length + 1 : 0;
+                        }
+
+                        return string.Create(length, segments, CreateLink);
+
+                        static void CreateLink(global::System.Span<char> buffer, string?[] parts)
+                        {
+                            var position = 0;
+                            for (int i = 0; i < parts.Length; i++)
+                            {
+                                if (parts[i] == null)
+                                    continue;
+
+                                buffer[position++] = '/';
+
+                                var span = global::System.MemoryExtensions.AsSpan(parts[i]);
+                                span.CopyTo(buffer[position..]);
+
+                                position += span.Length;
+                            }
+                        }
                     }
                 }
             }
