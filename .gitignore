@@ -396,3 +396,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Custom
+/artifacts
+*.GhostDoc.xml
+coverage.xml
+coverage.opencover.xml
+*.received.txt

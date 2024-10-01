@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <IsPackable>true</IsPackable>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+
+    <IsRoslynComponent>true</IsRoslynComponent>
+    <AnalyzerLanguage>cs</AnalyzerLanguage>
+    <AnalyzerRoslynVersion>4.4</AnalyzerRoslynVersion>
+    <DevelopmentDependency>true</DevelopmentDependency>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- https://learn.microsoft.com/en-us/visualstudio/extensibility/roslyn-version-support -->
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="[4.4.0]" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(OutputPath)\$(AssemblyName).dll" PackagePath="analyzers/dotnet/roslyn4.4/cs" Pack="true" Visible="false" />
+    <None Include="$(AssemblyName).targets" PackagePath="build" Pack="true" Visible="true" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RouteLink.Generators.Tests": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\..\\test\\RouteLink.Generators.Tests\\RouteLink.Generators.Tests.csproj"
+    }
+  }
+}

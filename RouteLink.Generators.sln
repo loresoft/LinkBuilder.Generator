@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouteLink.Generators", "src\RouteLink.Generators\RouteLink.Generators.csproj", "{52D22058-9985-4AE3-8AEE-1E2A68A6AC20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{89A8DB30-7715-4CE9-A057-925D97D21512}"
+	ProjectSection(SolutionItems) = preProject
+		.github\dependabot.yml = .github\dependabot.yml
+		src\Directory.Build.props = src\Directory.Build.props
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{74029119-636B-4364-998D-E9DFD2BB6DBF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouteLink.Performance", "test\RouteLink.Performance\RouteLink.Performance.csproj", "{4ABB26B7-14C3-45BE-BE3D-153954745F15}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouteLink.Generators.Tests", "test\RouteLink.Generators.Tests\RouteLink.Generators.Tests.csproj", "{F99226A9-1425-424D-95AF-611D9A631619}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52D22058-9985-4AE3-8AEE-1E2A68A6AC20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52D22058-9985-4AE3-8AEE-1E2A68A6AC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52D22058-9985-4AE3-8AEE-1E2A68A6AC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52D22058-9985-4AE3-8AEE-1E2A68A6AC20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ABB26B7-14C3-45BE-BE3D-153954745F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ABB26B7-14C3-45BE-BE3D-153954745F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ABB26B7-14C3-45BE-BE3D-153954745F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ABB26B7-14C3-45BE-BE3D-153954745F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99226A9-1425-424D-95AF-611D9A631619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99226A9-1425-424D-95AF-611D9A631619}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99226A9-1425-424D-95AF-611D9A631619}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99226A9-1425-424D-95AF-611D9A631619}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4ABB26B7-14C3-45BE-BE3D-153954745F15} = {74029119-636B-4364-998D-E9DFD2BB6DBF}
+		{F99226A9-1425-424D-95AF-611D9A631619} = {74029119-636B-4364-998D-E9DFD2BB6DBF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46C45F3C-4058-426F-B1F9-4C8E368BE903}
+	EndGlobalSection
+EndGlobal

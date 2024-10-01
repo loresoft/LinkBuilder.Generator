@@ -1,0 +1,12 @@
+<Project>
+  <ItemGroup>
+    <CompilerVisibleProperty Include="AssemblyName" />
+    <CompilerVisibleProperty Include="RootNamespace" />
+    <CompilerVisibleProperty Include="RoutesNamespace" />
+    <CompilerVisibleProperty Include="RoutesClassName" />
+  </ItemGroup>
+  <PropertyGroup>
+    <RoutesNamespace Condition="'$(RoutesNamespace)' == ''">$(RootNamespace)</RoutesNamespace>
+    <RoutesClassName Condition="'$(RoutesClassName)' == ''">Routes</RoutesClassName>
+  </PropertyGroup>
+</Project>
